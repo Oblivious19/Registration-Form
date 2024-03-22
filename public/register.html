@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="regis.css">
+
+    <title>Registration</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form  action="/register" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" value="Shreya" ><br>
+        <label for="gender">Gender</label>
+        <select required id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="trans">Prefer not to say</option>
+          </select><br>
+        
+        <label for="email">Email</label>
+        <input type="text" name="email" value="Shreya@gmail.com">
+        <label for="password">Password</label>
+        <input type="password" name="password" value="Password">
+        <input type="checkbox" onclick="myFunction()">Show Password <br><br>
+        <a href="submit.html"><input type="submit" value="Submit"></a>
+    </form>
+    <script>
+        function myFunction() {
+         var x = document.getElementById("password");
+         if (x.type === "password") {
+          x.type = "text";
+         } else {
+          x.type = "password";
+         }
+        }
+        </script>
+</body>
+</html>
